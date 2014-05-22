@@ -19,12 +19,12 @@ $('#password1').keydown ->
 
 $('#password2').keydown (e) ->
   $('.input').removeClass 'error'
-  if $(this).val().length == 0 && e.keyCode == 8
+  if $(this).val().length == 0 && (e.keyCode == 8 || e.keyCode == 37)
     $('#password1').focus()
 
 $('#password3').keydown (e) ->
   $('.input').removeClass 'error'
-  if $(this).val().length == 0 && e.keyCode == 8
+  if $(this).val().length == 0 && (e.keyCode == 8 || e.keyCode == 37)
     $('#password2').focus()
 
 $('.candidate.selection').each ->
